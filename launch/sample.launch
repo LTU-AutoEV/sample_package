@@ -1,0 +1,40 @@
+<launch>
+
+
+    <!-- ********** L2Bot ********* -->
+    <include file="$(find l2bot)/launch/l2bot.launch" />
+
+
+
+    <!-- ********** Camera Publisher ********* -->
+    <!--
+         If you are not using a camera, delete everything inside of
+         (and including) the <group>...</group> tags.
+
+         To set up your own camera go to the following wiki page:
+         https://github.com/LTU-AutoEV/l2bot_examples/wiki/Using-a-USB-Camera
+    -->
+
+    <!-- The parameter "ns" will be the name of camera -->
+    <group ns="camera_1">
+
+        <!-- The camera input -->
+        <param name="~source" type="string" value="/dev/video0" />
+
+        <!-- Flip the image horizontally -->
+        <param name="~hflip" type="bool" value="false" />
+
+        <!-- Show the output image in a cv window -->
+        <param name="~show_output" type="bool" value="true" />
+
+        <!-- ******* Launch the cam_pub node ********* -->
+        <node name="cam_pub" pkg="l2bot_examples" type="cam_pub" output="screen" respawn="true" respawn_delay="10"/>
+    </group>
+
+
+    <!-- ********** YOUR NODE GOES HERE ********* -->
+    <!-- Change "my_node_sample" to the name of your node (usually the name of your cpp file) -->
+    <node name="my_node_sample" pkg="sample_package" type="my_node_sample" output="screen" />
+
+
+</launch>
