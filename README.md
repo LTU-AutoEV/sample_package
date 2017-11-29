@@ -21,8 +21,9 @@ We will use this package as a starting point for creating your own package. Simp
 
 ## 3. A tour of your new package
 
-This package contains 2 files and 2 folders:
+This package contains 3 files and 2 folders:
 
+  - **README.md**: The file you are currently reading
   - **CMakeLists.txt**: These are the instructions ROS uses to compile your programs when you run `catkin_make`. All new programs (nodes) must be listed in this file.
   - **package.xml**: This file contains information about the package like author and version number.
   - **launch/**: Folder containing launch files
