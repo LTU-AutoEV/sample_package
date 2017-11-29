@@ -1,6 +1,6 @@
 # Writing your own ROS packages and nodes
 
-This guide will show you how to write your own ROS package and nodes using this package as a starting point. 
+This guide will show you how to write your own ROS package and nodes using this package as a starting point.
 
 ## 1. Preliminaries
 
@@ -11,10 +11,10 @@ First, please make sure you have the `l2bot` and `l2bot_examples` packages insta
 
 ## 2. Setting up your package
 
-We will use this package as a starting point for creating your own package. Simply clone this repo into `~/l2bot_ws`:
+We will use this package as a starting point for creating your own package. Simply clone this repo into `~/l2bot_ws/src`:
 
 ```
-~/l2bot_ws$ git clone https://github.com/LTU-AutoEV/sample_package.git
+~/l2bot_ws/src$ git clone https://github.com/LTU-AutoEV/sample_package.git
 ```
 
 **Note**: Do not change the name of this package. It must be "sample_package" to work. A tutorial for changing the name of the package will be added later.
